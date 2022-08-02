@@ -3,10 +3,138 @@
   height: var(--default-layout-header-height);
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
   justify-content: center;
+  align-items: center;
   display: flex;
 }
 
 .content {
   width: var(--default-layout-width);
+  padding: var(--default-layout-padding);
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search,
+.search-result {
+  width: 353px;
+}
+
+.search {
+  padding: 12px 16px;
+  background: rgba(22, 24, 35, 0.06);
+  border-radius: var(--default-layout-border-radius-search);
+  display: flex;
+  align-items: center;
+
+  &:focus-within {
+    border: 1.5px solid rgba(22, 24, 35, 0.2);
+  }
+
+  input {
+    caret-color: var(--primary);
+    color: var(--black);
+    width: 292px;
+    height: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: transparent;
+  }
+
+  .loading-icons {
+    display: flex;
+    height: 16px;
+    align-items: center;
+
+    svg {
+      color: rgba(22, 24, 35, 0.34);
+      width: 16px;
+      margin: 0 12px;
+    }
+  }
+
+  button {
+    color: rgba(22, 24, 35, 0.34);
+    cursor: pointer;
+  }
+
+  .search-btn {
+    padding: 11px 16px 11px 12px;
+    margin: -12px -16px;
+    font-size: 0;
+    margin-left: 0;
+    border-bottom-right-radius: var(--default-layout-border-radius-search);
+    border-top-right-radius: var(--default-layout-border-radius-search);
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: rgba(22, 24, 35, 0.75);
+    }
+
+    &:hover {
+      background-color: var(--hover-btn);
+    }
+  }
+
+  span {
+    background-color: rgba(22, 24, 35, 0.12);
+    width: 1px;
+    height: 28px;
+    margin: -3px 0;
+  }
+}
+
+.search-result {
+  .search-account-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+  }
+}
+
+.see-more-result {
+  width: 223px;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.functions {
+  display: flex;
+  align-items: center;
+
+  .action-btn {
+    background-color: transparent;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .user-avatar {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 24px;
+    object-fit: cover;
+  }
+
+  .see-more-icon {
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+  }
 }
